@@ -1,0 +1,235 @@
+
+.hallow{
+    margin-top: -50px;
+}
+
+/* Lightbox */
+
+
+
+
+#lightbox{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0, .8);
+    display: none;
+}
+#lightbox.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lightbox img{
+    max-width: 90%;
+    max-height: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+/* button select */
+.dor{
+    width: 30%;
+}
+.ini{
+    background-color: #660ff2;
+    width: 55%;
+    color: ghostwhite;
+    padding-left: -30px;
+}
+.bie{
+    color: ghostwhite;
+}
+.baiu{
+    background-color: #ADFF2F;
+}
+
+
+/* ========================Blanko============================= */
+
+.thead-light tr{
+    text-align: center;
+}
+/* =========================ModalIMG=========================================== */
+.btn-purple{
+    width: 30%;
+}
+.btn-primary{
+    width: 100%;
+}
+.blue {
+    background-color: lightblue;
+    text-align: center;
+
+
+}
+
+.colblue {
+    background-color: lightskyblue;
+    text-align: center;
+
+}
+
+.green {
+    background-color: mediumturquoise;
+    text-align: center;
+
+}
+
+.card-bor {
+    border-radius: 2em / 5em;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    height: 35px;
+
+
+}
+
+.card-body {
+    border-width: 1px;
+    border-style: solid;
+    border-color: blue;
+    border-color: lightblue;
+
+}
+.previewoig{
+    width: 100px;
+}
+.previewmodal{
+    width: 100%;
+}
+
+
+/* ============================SIdeBaree============================= */
+.bg-cyan a {
+    font-weight: bold;
+    text-decoration: underline;
+
+
+}
+
+.sidebar-brand-text {
+    font-size: 35px;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}
+
+.sidebar-brand-text sup {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}
+
+.purple {
+    background-color: #6610f2;
+}
+
+.rotate-n-1 {
+    margin-left: -32px;
+    transform: rotate(25deg);
+    margin-top: -40px;
+    color: yellow;
+}
+
+.sidebar-brand {
+    margin-top: 10px;
+}
+
+/* userblanko */
+.half {
+    width: 37%;
+}
+
+.btn-purple {
+    background-color: #CB00DF;
+    color: #49F0F3;
+    font-size: 20px;
+    left: 200px;
+    top: 15px;
+}
+
+.center {
+    bottom: 300px;
+    left: 40px;
+}
+.size {
+
+    height: 90%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.move {
+    left: 30px;
+}
+/* upload==================== */
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding: 120px 0px 85px 35%;
+    text-align: center !important;
+    
+    margin: 0;
+    width: 100% !important;
+}
+.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+ }
+.files{ position:relative}
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.color input{ background-color:#f1f1f1;}
+.files:before {
+    position: absolute;
+    bottom: 10px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    display: block;
+    margin: 0 auto;
+    color: #2ea591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
+@media (min-width: 576px) { 
+    .files input {
+        outline: 2px dashed #92b0b3;
+        outline-offset: -10px;
+        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        padding: 120px 0px 85px 35%;
+        text-align: center !important;
+        margin: 0;
+        width: 100% !important;
+    }
+
+
+ }
