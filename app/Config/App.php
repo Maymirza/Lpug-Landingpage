@@ -183,14 +183,6 @@ class App extends BaseConfig
 	| except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 	|
 	*/
-	public $sessionDriver            = 'CodeIgniter\Session\Handlers\FileHandler';
-	public $sessionCookieName        = 'ci_session';
-	public $sessionExpiration        = 7200;
-	public $sessionSavePath          = WRITEPATH . 'session';
-	public $sessionMatchIP           = false;
-	public $sessionTimeToUpdate      = 300;
-	public $sessionRegenerateDestroy = false;
-	public $composer_autoload        = '../vendor/autoload.php';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -207,11 +199,6 @@ class App extends BaseConfig
 	|       'cookie_httponly') will also affect sessions.
 	|
 	*/
-	public $cookiePrefix   = '';
-	public $cookieDomain   = '';
-	public $cookiePath     = '/';
-	public $cookieSecure   = false;
-	public $cookieHTTPOnly = false;
 
 	/*
 	|--------------------------------------------------------------------------
@@ -229,7 +216,7 @@ class App extends BaseConfig
 	| Comma-separated:	'10.0.1.200,192.168.5.0/24'
 	| Array:		array('10.0.1.200', '192.168.5.0/24')
 	*/
-	public $proxyIPs = '';
+	public $proxyIPs = [];
 
 	/*
 	|--------------------------------------------------------------------------
@@ -246,12 +233,6 @@ class App extends BaseConfig
 	| CSRFRegenerate  = Regenerate token on every submission
 	| CSRFRedirect    = Redirect to previous page with error on failure
 	*/
-	public $CSRFTokenName  = 'csrf_test_name';
-	public $CSRFHeaderName = 'X-CSRF-TOKEN';
-	public $CSRFCookieName = 'csrf_cookie_name';
-	public $CSRFExpire     = 7200;
-	public $CSRFRegenerate = true;
-	public $CSRFRedirect   = true;
 
 	/*
 	|--------------------------------------------------------------------------
@@ -268,4 +249,6 @@ class App extends BaseConfig
 	|   - http://www.w3.org/TR/CSP/
 	*/
 	public $CSPEnabled = false;
+	public $allowedHostnames = ['localhost', 'https://lpug.gunadarma.ac.id'];
+
 }

@@ -1,73 +1,22 @@
 <?php
 
-namespace Config;
+use Config\Services;
 
-// Create a new instance of our RouteCollection class.
-$routes = Services::routes();
-
-// Load the system's routing file first, so that the app and ENVIRONMENT
-// can override as needed.
-if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
-	require SYSTEMPATH . 'Config/Routes.php';
-}
-
-/**
- * --------------------------------------------------------------------
- * Router Setup
- * --------------------------------------------------------------------
- */
-$routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Auth');
-$routes->setDefaultMethod('login');
-$routes->setTranslateURIDashes(false);
-$routes->set404Override();
-$routes->setAutoRoute(true);
-
-/**
- * --------------------------------------------------------------------
- * Route Definitions
- * --------------------------------------------------------------------
- */
-
-// We get a performance increase by specifying the default
-// route since we don't have to scan directories.
+// Definisikan rute di sini
 $routes->get('/', 'Auth::login');
-$routes->get('/', 'Auth::registration');
-$routes->get('/', 'Auth::forgotpswd');
-
-
 $routes->get('/admin', 'Admin::dashboard');
-$routes->get('/admin', 'Admin::woracle');
-$routes->get('/admin', 'Admin::wsap');
-$routes->get('/admin', 'Admin::wcisco');
-$routes->get('/admin', 'Admin::boracle');
-$routes->get('/admin', 'Admin::bsap');
-$routes->get('/admin', 'Admin::bcisco');
+$routes->get('/admin/woracle', 'Admin::woracle');
+$routes->get('/admin/wsap', 'Admin::wsap');
+$routes->get('/admin/wcisco', 'Admin::wcisco');
+$routes->get('/admin/boracle', 'Admin::boracle');
+$routes->get('/admin/bsap', 'Admin::bsap');
+$routes->get('/admin/bcisco', 'Admin::bcisco');
 $routes->post('/admin/activeinfo', 'Admin::activeinfo');
 
-
-
-
 $routes->get('/user', 'User::woracle');
-$routes->get('/user', 'User::wsap');
-$routes->get('/user', 'User::wcisco');
-$routes->get('/user', 'User::boracle');
-$routes->get('/user', 'User::bsap');
-$routes->get('/user', 'User::bcisco');
+$routes->get('/user/wsap', 'User::wsap');
+$routes->get('/user/wcisco', 'User::wcisco');
+$routes->get('/user/boracle', 'User::boracle');
+$routes->get('/user/bsap', 'User::bsap');
+$routes->get('/user/bcisco', 'User::bcisco');
 
-/**
- * --------------------------------------------------------------------
- * Additional Routing
- * --------------------------------------------------------------------
- *
- * There will often be times that you need additional routing and you
- * need it to be able to override any defaults in this file. Environment
- * based routes is one such time. require() additional route files here
- * to make that happen.
- *
- * You will have access to the $routes object within that file without
- * needing to reload it.
- */
-if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
-	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
-}
